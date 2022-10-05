@@ -21,7 +21,7 @@ require('yup-phone');
 const schema = yup
   .object({
     name: yup.string().max(20).min(3).required(),
-    number: yup.string().phone().required(),
+    number: yup.string().max(7).min(7).required(),
   })
   .required();
 
